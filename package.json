@@ -10,9 +10,11 @@
     "node": "20"
   },
   "scripts": {
-    "dev": "nodemon --exec node --loader ts-node/esm index.ts"
+    "dev": "nodemon --exec node --loader ts-node/esm index.ts",
+    "build": "yarn tsup index.ts",
+    "start": "node dist/index.cjs"
   },
-  "dependencies": { 
+  "dependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.12",
     "@types/nodemailer": "^6.4.14",
@@ -23,6 +25,7 @@
     "nodemailer": "^6.9.9",
     "nodemon": "^3.0.3",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   }
 }
